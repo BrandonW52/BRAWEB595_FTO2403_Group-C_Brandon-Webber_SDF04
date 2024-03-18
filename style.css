@@ -1,54 +1,129 @@
 body {
-    background: #eeefed;
+  background: #eeefed;
+  position: relative;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .logo {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 40%;
-    padding-top: 25px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  padding-top: 25px;
 }
 
 h1 {
-    position: relative;
-    text-align: center;
-    color: #353535;
-    font-size: 50px;
-    font-family: "Calibri", sans-serif;
+  position: relative;
+  text-align: center;
+  color: #353535;
+  font-size: 50px;
+  font-family: "Calibri", sans-serif;
 }
 
 p {
-    font-family: 'Lato', sans-serif;
-    font-weight: 300;
-    text-align: center;
-    font-size: 18px;
-    color: #676767;
-    margin-bottom: 40px;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  text-align: center;
+  font-size: 18px;
+  color: #676767;
+  margin-bottom: 40px;
 }
 
 .custom-btn {
-    width: 130px;
-    height: 40px;
-    color: #000;
-    border-radius: 5px;
-    padding: 10px 25px;
-    font-family: 'Lato', sans-serif;
-    font-weight: 500;
-    background: transparent;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    position: relative;
-    display: block;
-    margin: 0 auto 20px; /* Center and add margin to stack vertically */
-    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
-        7px 7px 20px 0px rgba(0, 0, 0, .1),
-        4px 4px 5px 0px rgba(0, 0, 0, .1);
-    outline: none;
+  width: 130px;
+  height: 40px;
+  color: #000;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: block;
+  margin: 0 auto 20px; /* Center and add margin to stack vertically */
+
+  /* Commented out box-shadow as it was causing styling issues */
+  /* box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1); */
+
+  outline: none;
 }
 
 /* Add your custom styles for btn-1, btn-2, and btn-3 */
+
+/* btn-1 */
+.btn-1 {
+  font-weight: 800;
+  padding: 0.5rem 1rem;
+  color: #ff005d;
+  background-color: #ff9cc7;
+  border: solid #ff005d;
+
+  transition: all 0.5s;
+}
+
+.btn-1:hover {
+  transform: translateY(-10px);
+  background-color: #ff005d;
+  color: white;
+}
+
+.btn-1:active {
+  background-color: #353535;
+  border: solid #353535;
+}
+
+/* btn-2 */
+.btn-2 {
+  border: solid #36cfe0;
+  transition: ease-out 0.3s;
+  position: relative;
+  z-index: 1;
+}
+
+.btn-2::before {
+  transition: all 0.5s;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  opacity: 0;
+  content: "";
+  background-color: #36cfe0;
+}
+
+.btn-2:hover:before {
+  transition: all 0.5s;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  z-index: -1;
+}
+
+.btn-2:active:before {
+  background-color: greenyellow;
+}
+
+.btn-2:active {
+  border: solid greenyellow;
+}
+
+.btn3container {
+  width: 100%;
+  height: 600px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+/* btn-3 */
+.btn-3 {
+  position: absolute;
+  cursor: pointer;
+}
