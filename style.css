@@ -107,11 +107,11 @@ p {
 }
 
 .btn-2:active:before {
-  background-color: greenyellow;
+  background-color: green;
 }
 
 .btn-2:active {
-  border: solid greenyellow;
+  border: solid green;
 }
 
 .btn3container {
@@ -125,5 +125,13 @@ p {
 /* btn-3 */
 .btn-3 {
   position: absolute;
-  cursor: pointer;
+  border: none;
+  color: white;
+  background: #b134eb;
+}
+
+.btn-3:active {
+  transform: scale(2);
+  background-color: red;
+  border: solid red;
 }
